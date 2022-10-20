@@ -18,7 +18,7 @@ function List() {
     }
 
     function filterItemsBySearchPatter(searchPattern) {
-        let filteredItems = countryList.filter(item => item.toLowerCase().includes(searchPattern.toLowerCase()))
+        let filteredItems = countryList.map(item => item.toLowerCase().includes(searchPattern.toLowerCase()) ? item : null)
         return filteredItems
     }
 

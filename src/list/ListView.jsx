@@ -4,7 +4,7 @@ function ListView({ elements, funcFilterItems }) {
             <input type="text" onChange={ev => funcFilterItems(ev.target.value)} />
             <ul>
                 {
-                    elements.map((element, index) => <li key={index}>{element}</li>)
+                    elements.map((element, index) => element && <li key={index}>{element}</li>)
                 }
             </ul>
         </div>
